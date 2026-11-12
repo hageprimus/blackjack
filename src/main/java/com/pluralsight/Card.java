@@ -39,6 +39,10 @@ public class Card {
     }
 
     public String display() {
+        //Can't display a face down card
+        if (!isFaceUp()) return "##";
+
+        //Formatting
         String suitIcon = "";
         String suitColor = "";
         switch (suit.toLowerCase()) {
